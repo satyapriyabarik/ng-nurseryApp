@@ -1,0 +1,697 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for context/NurseryContext.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">context</a> NurseryContext.jsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">10% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>4/40</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/16</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/15</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">10.81% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>4/37</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { createContext, useState, useEffect } from 'react';
+&nbsp;
+export const NurseryContext = createContext();
+&nbsp;
+const initialPlants = [
+    {
+        id: 1, name: 'Rose',
+        care: 'Full sunlight',
+        nextWatering: Date.now() + 60000,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQznSUipw7u1sWW24l3fer-VQ8AJzo3JAQDpw&amp;s',
+        description: 'Beautiful red rose, requires moderate care.',
+        category: 'Flower',
+    },
+    {
+        id: 2, name: 'Tulip',
+        care: 'Partial shade',
+        nextWatering: Date.now() + 120000,
+        image: 'data:image/jpeg;base64,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',
+        description: 'Vibrant tulip, blooms in spring with minimal care.',
+        category: 'Flower',
+&nbsp;
+    },
+    {
+        id: 3, name: 'Sunflower',
+        care: 'Full sunlight',
+        nextWatering: Date.now() + 180000,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuwL5oIXbxpXnI6mbp-4LimNczo5ypZKJSAETPbju5p9XG3zGGYSHTCqB8-VcJyvxGIyrt&amp;s',
+        description: 'Tall sunflower, loves sun and requires regular watering.',
+        category: 'Flower',
+    }, {
+        id: 4, name: 'Cactus',
+        care: 'Bright light, minimal water',
+        nextWatering: Date.now() + 300000,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeiwPc_ZXCRVacBU-AcmKsHyh5mgXzf3mrun7d5rE6hBGZTrJEVrS9Wg&amp;s',
+        description: 'Low-maintenance cactus, perfect for sunny spots.',
+        category: 'Succulent',
+    },
+    {
+        id: 5, name: 'Aloe Vera',
+        care: 'Indirect sunlight, water every 3 weeks',
+        nextWatering: Date.now() + 240000,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjj4plxKhCG_TKzMBZx4hB5JnEcUtysjyLTGH6PPNHZMZhZa11N8QU_Yk&amp;s',
+        description: 'Medicinal plant, easy to care for with infrequent watering.',
+        category: 'Succulent',
+    },
+    {
+        id: 6, name: 'Snake Plant',
+        care: 'Low light, water monthly',
+        nextWatering: Date.now() + 360000,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMJ7OonjwZ_0jlok2R-Q59gyNfbs2HXIIY02AQRKYUr1JQoRE2ACJ0XzA&amp;s',
+        description: 'Hardy plant, thrives in low light and needs little water.',
+        category: 'Succulent',
+    },
+&nbsp;
+    {
+        id: 7, name: 'Basil',
+        care: 'Full sunlight, water when soil is dry',
+        nextWatering: Date.now() + 90000,
+        image: 'data:image/jpeg;base64,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',
+        description: 'Aromatic herb, requires regular watering and plenty of light.',
+        category: 'Herb',
+    },
+    {
+        id: 8, name: 'Mint',
+        care: 'Partial shade, keep soil moist',
+        nextWatering: Date.now() + 150000,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYsoC3IPxxbGLU3XszEffVYCMM8oFD2tt0Ea7Amor3MU-SS_kPew0Qyio&amp;s',
+        description: 'Refreshing herb, thrives in moist soil and indirect light.',
+        category: 'Herb',
+    },
+    {
+        id: 9, name: 'Thyme',
+        care: 'Full sunlight, water sparingly',
+        nextWatering: Date.now() + 210000,
+        image: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAKgAtAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAAEDBAYHAv/EADwQAAIBAwMCBQMCBAUDAwUAAAECAwAEEQUSITFBBhMiUWEUcYEykSNCodEVUnKx8ENiwRbh8QczNFOC/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDBAAF/8QALBEAAgICAQQCAAMJAAAAAAAAAQIAEQMhEgQTMUEiUTJhcUJSYoGRobHB0f/aAAwDAQACEQMRAD8A7fSFeqVdOjEZpYppCApJBIAzxVWx1C2vkLwSBiDyvdfvQsTrloilig092x8S29uHwiwkke+en+1GhQBszo2KcU9KmnRUqVKunRUxqO5mS3haaU4ReSfasv4j1ttJ1eyuTI7WjJiRE5DA55/BxSO4QWZ11NVXoVl/CHiC71u4v2lt0jtYiBEQf6f+fzWjgnhmLiGaOQocMEYHaaKsGFiAG5Lilj96emNNDKs13bxvsklGfmql/rdpZvGN4JdtvFV/FGlNfWT+QcSjkcVyZLieG9ZLuVmKMQcnJH2qOTIymgINkztbX9sm3c+N3SrYII46VjPB9zaXnobc0ijjcpFbNRgdO1VBsXDVR6VKlRnRUqVKunRUqVKunRj1rAeJ0GnaiZLBsmY52xnlW+3zWz1WG6uLYx2cqROerMKxuo6VNpyxmS/to7uVsRB1baxHuwHHbmsXVswGh/OK09+FLme/1VrnUMxvEMZbjcR/z+taXTtesL+d4IJdsitjY4wT8iuV65Z3kaPdfWqhWRvOkAPEgOMDHU4I9WBnvirOiTSJqNvrFzGwtY4QF3jbkHjcPcf3psOSl0JRFBGp1yaaOCJpJWCoo5JNDtL1pNTuHS2gl8hek5GFasLJqTalcxR30kj27TcIr9FJ9q3uiXcN1DKltHshgfy1x3GBTJmGRqEne4SqCe6jhGCcVSutbsIWeMXMRlXgru6Vldc1CeSQJbHLNnnOa7N1KYvJhu5rLjU4MFHIKsMEE4yK5/r17b2On3On6qArRrv0+cH9ak/oofLNfrMoeTIBJ/NE7fUtLvLzTW1Abxapu56K5PGf3NTGQZdGFBynnwloOq31oxW7uLSxd87HzlvsPauiaTpltpVt5FqmB1Zj1Y/NRvqltBb78qcLuEaEZZR3A70C0PxpFqetPYSW/kpsaSOQt129j+Oauqok4LNfXkOhJw+cUO0nWINWkuBaKxihYL5pHpc/FAtZ0PUra9a/0edvUcvCzcH3x7GnLCrE6ayV1VGJPAB4rLaZ4bsf8RudRutpeZ9wDdhWWvfEN6l+tvJ5iznrGeuK93Q1fUpVitzKQP5FbBH3rHk61VNBbMDEgTpFta2cTZgVQf8Atq33rLeGtDvLZ1uL68lcgcJ2FBNZ8STN4jRLaVlht5Vj2g8Mc4Of6VZuoCKpYVeoC1TolRyyxw7fNdV3HaMnGT7V6B43HpjNYbxnqIk1L6Xbu+nClecbXJzn9sVTLlGJbM4tU3X/ADrSqC2cvbxMQSSgJ5HtSqoFi51yxmmzUVw5jhDL14FVdW1KLS7B7udtqKBzjPNAkDzG1G1zWLfRreO4uo5WjaTYWjXO0kHk/FYzVJYdS1U3SStJbyhR5UjYCNjDcZ5BCr09zRmTxXZtYGSeHzkYepFwfT8g1lUstPcPfwSTQq7EwwRTbFPfjI4x1+MZ7V5nVsM3wUyRIJlDXbltIvEMWWJyIoV/zNtyxHf0r/v7V6uMXmlz3Mk8rzFFicH9IG8E4/pz8UJl1G32Xp1C5mu5WmaCOLbyFCqC78gD1Koz35464Ii4D6U0ZaIKWVYyOCwzycfAUf8ADUuHbTbXX1KEAbBkglg0i6EzzrlUwOMkds1pPCmuSXejTjR/JN5byl3tpPT5oPPXt96BtdadFBZTwQqlxE7SXDSrklcdQaI3Ol6R4hI1fTNRngu2hO1IX2NGRnqB9+9d0YUHlys/9iqQTuRa8NP1Uwarbp5d6pHnIE6H/u+c0d0PTWET3l6uDIMRqeoHvWH8KeIZtOji0/UYY7qKabz3fI3DvyK6He6za3ljKLeUKR7Y4OKumHH3O60avqA9Zto4gbo4Aj9WD3rD2+l6nLcKPJYJMxP+r4/ark2tRPhLyWS5KMf4Z9Kj7+9T6R4huL64f6SDBgUlB0B+BQLB28VKhSq68yLxC15bNJFOyutsu9pJwVWPA4CYPNUPDlzHqmu20F5K1tEYNx2Ng5I9S57DB/atlvGqSwXV9YEukZUNIOn4rPa9bW8N9cXBVQxtokGBjHqb+4oO4siA5AdV6m78RXZ0fw2kWhMsLhhtCAE4J5/JzVB9f1hdDuo76NI7lBjzFZdwHyB07fvQa4uPqLJHQM6FR+/xQ+PWjbyC01Eh1PSQdcexpcuZq+H1Mzq/kR4rqaSwMkMSm6X0+YT6m9gP961fhGNNHcy3rhN0Prz1zkHmsVJqtjZ3cBitpJACMC3zl/weP2q/q17q09i0semSW1qFycsC+Pcj2rL075VbkRuS+V/LzOuRSpMu+Jgyk8EVyfVba2i1W6ks53mdZiyr2JJ4A/NFPCGqy6VFc3Or3KLavGpA77uen9KznnxC+kks3bYzkxMfbPH/AIrd1LDIqE/c0Mr0Cy1OwWeLTTIBO/KRKGY9+K5t4ku7V9Vv54LhHQMshbPTAHH9KA+J9R1lgqXepyXEO39EeFUf3ofpCR3ryRnG54iAGGeabqMmLIvAxz26+U3HhPxlb22kKl/fSSTGRmxFBuCAnhc0qzNhokEtuGliy+cNtXilTL1BAqJQnTm8S6ffaWJ7GYTLJlRweo6jmvUN3a67ok8FzEZBsKSRjqSPb+lcNutYu5rGe1O10d/MHk5BVyd2QO4JJ4+aNaTql1aSWP1N6/lIQ0CW/qFw3Xr/AJegOemMUvfe7YQlbl+UwQeapk2LjaY3/UMHoaV4jPZRR75YUAKqqKGwT33AkjJPtVzXLLSLHU4J9TuJo9Q9M+wpugbnO35HY4qQXthd3EuLaNVXa0UmfUrDJO0jqOhwc9/vWDspjyE35kVQcquZ3SdCnlnle6aOFLbaWZAVkl9sg/25xTXdx52pyGKAxJ5e4b3LHepO5vuQRngc17ME8FzFKL+2n9W2VM7HC5bqgJxjzF6nOPjFDnvZJ9SlFjbNLIJjJFtXII6HPwRnNaCtHj9ialTi5X7EOWl15AWZ0OxjtzjscZqjDcoiSaXY7nlnlGWU5IUHp9qaDxC1pGbAxedA/wDEt2LY9LdiPcHI/FCJLj6S2kmsTLFcXAPrKjEYyf0nPNZ8fT8TVyHbN1CkFo+mxpb3NxEC5LNKvJU+xNXVvrS0sI8yCSR8444asRZwaoIJVjSWa2IJckZA96OeHGaaS4hkhkmDqqR7IyQCTxkjp+fmtORNWDKcNXJohaRo80iGV3J3rnge1FNLj8m1863K21sjN63BLyvjOAPYe5+KsmyLX30cMdnJpwOyIxMu+M/5iSNzHgk9iM+1S6pAbm+ktIGzFbRBEYjA2/5vY5JJrBkzakmcncsfXxPZgQ3aLPEM4Zv1A9DQya4S7i+r1CRY7eNhuDNlpCOwHYZNBtcsIGv445bv6ZJIcoWbBYAkc/tUq6ZpSQS/W3AERjUJKG3bjWxNrdy6MGB/SR3PiC9muGhtVAQEAMOij2NXrfVtGv5jHqcK5gUEuTgsaAQ3cVszwWV2r5bJdUwT+DUk265jxPCJFU8ugwwotxDAn1EZxYBmms721tZHSCOKNUiDo45Y89KH3niW6QmL1Bi2PScriqunQ3TNcTQW8kkcaAkqMgD5qNilveRsyuY5V5Z14yfmufjdmMxQfICWkvJdYuo45pdtv/OvYUtPm08eJ7a1vYZPIWQqXyQCpHFXLTTIVjE4uUWU52qF9J+5qX+DDbSvqZwGwEAIyx+KmudBoSTdQSNxta02CPVZoILl5Ldh/DLnOwVb0XSv8IkF1JKrlUOFH82aG6pbosEDQzs0s/WNuq/NWZXkjgWVm4UD1e9LmyMKNe4f2BNBFaXsqCSGPYr84pVn18byQKI1i3Be9Ktd4z6M2DEtQVrF1DbGWC3ZZZnLbpPLx5YPIAxyfbNZ83V1bLFNaLIDAw2kjqT7E9+OnxXQo5IoLdZGhiM7gKZAn6c1W1qJPofJUJE5IKlV5HvigMosCpn73oiUNI1fUb8G51KaOOEgR+VOS6ZA5Crg47e3Wi1lYeUt1dxRKYVcPCo9S7yOvTtg4B989qD+H7a91GG4i2f/AIziRZh6VwQMhj78Dj5ozZP5Uax2ZaS4kcKEyQM9QeQO9ed1TNz+ImfK5DaEH6kk1rNDqF9C0kkRUyGRMNLG2Qc8c4PQn/xRGy1qG+jt5NMj+l9RElqrITKckbTjnGQOfYValsrS6uoLS8kkv7lju2RvtVGwQxJ9huP9aBPpVvo/iOePSrtY4ZIyVU5JD5wVznof61px/LBTfiEuuQNi/iH+IW1K1ie0ksEijLHG1FwqQncCcH34IznvWYjt7i4cLJYzN5b7RmM7Y8djxgdqs6hpU1vYSTarr0MRjfc4ji3nHOFHPJ+P7VnNQ1C585bpL2QDGNykoVwOuM/I/aiiMfJkjyJFGaa8lRlt9Mgu0zOdtzLG36E7qvGKjS6i0+K1m0u7uEjtHfZHMQfNYkkZxjk8j7ACqEktssy3QtshjuMglcyPuHJ5JGTn2qCFYrwJbfUPGhkBUhd0gYdu1Tu9eoOQGobmmjjMiwCVZSpRggGATwVHuecZ7/1N+7MlhAtnbpvVsoWOSxC88fP96BXaHT7qS3eVZphEs0bcowYsB61zwe/BHbp0ptN8Qxa9IdN1QKl3GxKkLhW7Ff8AVnkdj9+sz0zMLXxEZTWoSu5BDBDLq+w2jLua2fDksOMJjofYjpznjNZXzt+n20U4zJkHZ1GeetGfEyrBYwT3QxNFL5G5TkMpBIyfbjigFrdJ/jFtNIpkijO4gH71swJSWJbDQUyK4025a7ZrS3MaBQCQcDP2q3BLPEXidmV8/pweaOwa4bmbZDpbLMRniEv1zzwD7V6utJiu386aOSJ41L+RuCCRsjgSHgdzjrxQ5lm4sImzQmj8OXP0ej2MxIxnzpfk7zn84UD8VLr8y28lxDCy7mUzRxHG0IACfz+ofj5oJprrPbQRJ6Y4xMrW8LM5IXPGTnBJIGOevT2JhZdUt4bx7pLDyG8vzMKZCdpBXcTgdcd+3twnZYGifJlFwsRR1Z8zLR3y6fcKHheZJwTHGDwGHBq2viUxXcarYW7y/wDTR4Q3Pbr0q08ytM0/1Vrc2cEZxPLGruzH2ZQWPbnjJFY681Rrd5RbbVkPpD9wD2pzhXnYELooavMu3WsSSaxcSTLk7+dowF+KJ6dftct5UjExPxg9qzGkmRZcsm7d1Ld6PLp7W6/VRkPt9TRjrikz409xQoBg3VbVrO9kiXp1FKtnHp1hfxR3d4XjllUNtPYUqgOqVfifIlKlDSb9jYS2Wokrc/qQ4/UKC6tqkst26M8jY4XnH7VoPEUSzyC2iZHkCAKV4MWO+aHWkENoySXkqvLHkK4XAUkd/ftVxlx8uYhZUvle4WsN93YwECaze2i2sjHapHdse56n5qZmu0gAjU3Ev8oZ9qk9cZ61XDQrpzwXzStlg8rsX3BxnAKgYC4IOc8/PaXXprRIoFjyLCEgwGFQTtwMH7nqee/XipMttyPj6mVqLAyLTtQmtNOuLlYne4uZG82Rc7YgW9Kk9h/b4qLX5re+XSr3RPPmuInK+Wy4ExQrzz0PJPPH7VDdxxWGpXStcvJFITG8CkFuTyWPI4wMHuRnjvTvNXvdSnt7PTRdRWsY2SR2s53snQsSMAruPIxwMe9aUVWNqZr4ICShg++kMglh1RriOVZCpBOcHnOR8YxxQ+6S6lZZra1N3BGiqwiQ7MDt9/70f03RbMSSmWZL23jy8mHO4sOAu5e2evwDRvW9SfT9NEWmx29oYYgSqrhIwxAAPyc0eYXQEhyDaEyscipdx3Oq2V/BDc5O7aRsyeHAHUD/AN6fUrqz0djeabqAuNRHRtwkB9+ffHevNjqWpOGaW8kMxJ3FOMYOKq6pq9xalUnf6kk743cAYPfOO/Ncicslf78/2hULe5DaXtwolmMg+pu5htecBmYdTn4zt5oVZ3y277mjdmY5Zgec9/zVmC6OqboZJFhmIIRlUDr0Uk8kUNjjJnKzKdynBB744/etqqNx2IMO3mvxXsMcdzNNJsyVTyx1/wAx9+lENJspJIUuJeZXT0hVyEH9/wC9e1t7WO0tk+jtZImhTcDGCWJA3HcOQc5prDQ4VvQy3k62m0uIN5BLDHpyO3JPY4U8jrWR8mOqGpMkEQ8Hk/w1I4WIZWYzBT/9zJ4Y++Bx8Yp7CW6WXbaXJjY4LDPBx3I7gc1Gy20jqq28QKn0uYwGGMfzfq/Oc4qeeRZ7nybPy4rzcWZ4sYjXnjB4yfYdqwp82sGTxoWbUFX+t6mL++tre5KJcR+p/LG9T/qHKkDPHPWqX1kUerwF45DAjb4zkqXPGSe/xj7cDNaS40U28INvuPoUq4O1lcD9Qx09iOP6VG8UEtkGniaS7t8vtYMfNwD+kgdSODnHvWwdSjmpYZQTXqers26tJA0n8cSGMNGwUenjG3t/8VidbMt1qBeK3I2+jaeuR3NFblpLm4NxNkPIc5brz7/PWpb1VeaGTYczId/OMMvGfzmp4Txb7kEb5XKOluxvoYX9JI5WthZwQyySNISscYG7A5PxQHSNLtr/AE26mhRlv7aXIdjnp2qbTNRuJLgyDYsDel9xxml6lGdgw9TQy8vc17iwkO7zJU4/SW6Uqyk9/cJKywoNo92pVl7aGR19w1Bo/wDh2nyTyO91PKRuMUZfafbNLT9Fu5dXtL2eIeRblpNqzRsMhTt4BzndjtVkwR2zabbR3cq2yytG8zqAyksSSfsCKstDphvB5MjwyqSpLt+o46tgAg/PNHnxctUY5FuXp41uY4r242RkId0jZ37OmFPXB55HXjr0oZPtnLPDB5kpXdHHJlROq/y8HsM8HmqGpy3EKyu87pIxw7SDehB7qGHGPkV4RRZWKT3MuLlJVAE0mQ7Alt5wenIHGABwCMCmyY2FE/0iPjZSCZLO9rqtr9TNBGsoBJlDFJEx3BGD1+aDhbJ9HuoRKsO5gJZQ2JJW3ZCHAzjBzkDnHcZq/r9haWot9QmC2moXCl1QznCllJwVPCjkD7msvdyC2sollO9Ac7VwdxPU1bCGqlJ3LY2bGKG4c0OSysbY2kavujfLKRkMQT2HI+2TVq0uZb1blFlkeLd6g2MNuB3dOpxxk9hjtQzR4op1S4052c+WG8oJtOO+AOpzjpU8cz2d95FpZG3V1C5K4bIGAxH78n3HxS5Qxse5MDyYP0rwxqFramR7uAluRGWJx/8A10zxQB3S71K2aVA8SMysv/d/bIFbfR5yDMsFmPqUJbylI8yUdP1Fc8Y6Aj796x2p6W1lJM6yHzIWDPFjC7TyNv2BHXmtqlSSb3HoD3DlxJbRaZI00EcmxD5a+WMk9sGsLLK0ly79HY5/2rRRhbpBKZgwA4JbIA/5zQuCGG71ps4MOTIVHQ4/uabphxu5yULhHR7/AAkdnLub1BUIHAyehPbk1o7WaKzlVhA9zKykQwqx9TcDGRzjBJ9uKqWp2FQxSOMc+WmQM/OKbS4zJdXEiXUn0kMW58YXe24DAx0HJ/as7BXezqBCpbc1MlnBZwpNcQPLMT+hHbZDx3IwSeG5+PzVKfTdMKQRWsDQXQkzBJCWfGT/ANTPOCfmpLzVC+pXNzaLKhYAJEsuUZAgHHzn1H7morG0kkDmRNrAZizwY268ewrMW4k8ZF8lH4nUsrfPAGtWuY8owLXE4IUKFIYDHzg4pra+hvLifyrhfKQ4SRU2F/xk980G1+ed7Df9QVhJCyKYxvQnjO7+n5rMxwSW13FPuLIrg5/tT4unDLZgCEiazxHeWAttolD3akHcFxgdwT3rNNfB3Db29PGOwqa5h+ouDBKfSjnDn/L7U9wLK+Zc5j2en+GOWArSmIJ5lkxgC7k2kag9nNIQcwyDnFMNQR7ny0Qgu2FzXqzhs3mW1ttPaQvwP4jFgffjgVbHhwlHK38bXUO5xCFyDjJxuyOePb81N+3e4hIkeRESklv5jA/qpq0WlWhv7JLhgqlvfv8ANKpcYlCG9U3eZBa28UwuZEAihPWMZ6kZyAMH1EnpVW4tLWw0OS4WSN7t5Az4/kxkKvXOMHv9+1UfC2nT2Gu3t7rUdwJni2wXE8nmbN2QQWycdcU/iq4jjtBArxh0TdI453O3T744A+3xScFRqWUri08Xt1Fe6M19bpKJ4Iy0iBs7/cnPt14rGwwyx3iSzyzTokgfyS52gZyR8VobLxBptjZSfWeamV2tCF37v9JzjH3xWbvtctFgJsbeZ+f1zKFH34JJq+Lum14yvcysKYS34hW9uYb+8muUdXf+HI3WVTgjA7fagWn+fqOYppBHEgy0jKS2OmB80UnW71YAKyrbwKAHbhEBz2HJJwf2rzY2Ajv44YLtWaciM+auwAk8HOTitKtwQj3AHqXGtxp1sLbczjkxsFA9HBwR0zyavaDdfVWpVw5kVi0Tv1ZcDPPwQD+ar+Lbc2UlkHV5IWRlWRAVyw4YEdiOPftQg2964SaGJ0aNgUToR80vFWS2PmGhVwt4suDbR2pik9cjekhvbB/596o291bXYnknujl0JfzD6iT7560P1O2lvikt1fwfUKuGRwybPYYC9aGxRTgszMwZeM7Sf+CqpiXtgX4hIE8vAscyrGzMdu7pj3qaz8tJhKz7AhwCP3OaKWGnWZ0+G5ljeQhyZZI5CNpycZHtjFSNBaMjxiGLzp/5tuAifHzVTlX8Jh14kdzqMSIAs2W5IQDv2ya9eHrw2t5NDfv5cFzFgNKMKrgg9T24x7ZIqfw9ZJbXck0mJJIV3IcZUMTgEfbr+KJS2kmtpJYlwXPKF+djKMlvtjP4rM2TGrcKiaupXudZJgEOm3KySxjeZFG5U9gM9+ucVLb+MnW1Ivrc74x6pI8Dd+CeDQ7w9oI/xO9a4mY2tm5iZo8AzMScKM5A6Ek4OOKj1vRbkzIumwzXNuxOAq7nX4bHGPnv3ruGEv24CuO6lW61a51i8dZOIHkLCHAAxzjPuahgjaG3LmQ4BOFY5HHbFQBLnTLgC5tZEk2EBZU2/tVqy3THYVLIerHoM9a00qfpHsDxNHpukXNyTcXlxttpo92ceoqemBUV9ZWVmqLZiT1jjed54/A96u2OoRCyitBJtkhXb/EOMj7/ABVB7qO4uyqSOvlAhWjb9yP6VhDsX34iBiW2dQ3pdsbbT1KI0clzzIzKQQmeF+Pf81SvLpbNvQrGWXKqAv4PT70IvpLmAlJbmaRWA2uJCQc9Mii9i5sbSNmSQ3JB2+nDAH2qT4uB5ndxWxhdy/Bb3cFtDGMLhAcGRV689CaVDP8AEFbJBwPluaVL3H/dk+403UwuXnhktI5AlwodIz6Xiz1Rlbnjpz7fas14j0DVtTuisUQaQEszmUBUPwepzg0UtnlkvI1IlDKC5ZSPSo4JPxzir1kLkzW91cyqsbTmNMAgScHk56dB+1Z0ysr2YFytjOpg9M0yC4y+o2++XcQysSACOCMdz/7U2v2FhFZmaCOOEow2hWLZOcYx0zjPStf44jjtJ7aeM7Wm3b0B78er79j+Kxd/HPcQK8rIy9Y44hkLn/zxW/Ez5H8zQHLSrpEwjtWW/n2wSOWi2qSVYAAn7cY/H7kJ322Qt/LhuXRN0DlTuVGP6evPXIHbP7BrqCZYTF5KtHjIDcEN8VoLuCMSSXZnjWBiTHIZABj47k9sVXMhuc6GFbow6ottpsQkka2LMJgQFbLHrzxwQPvmg0RTyTcT3EUEC872kAHXtjJP4Bo1PeW1n4NF5aOVkuo0to/Tg7uQ/wBuFPznFY+SKF45jAJDb/pj8wAN0744/ao4kJPyihbni/v7bU5VSAtHHGSAWY7pP2HHbj/4E6REQhP0qOozk/mg/wBHJkELyBirHlTuAjyOB0wa2nCB+E6lCpMjsb2e0u5o7WNX83KsjdGFX0uLmS1FvJtOw43Y5wOn+9VYrIq4hijIycs54x+aM6dbxQzPcXUayLBhVibo784z7jv84A70mUhfIjFq8iTaIsMdxsv8xxToVRycev8AlJ9x/ejkF1b29s9tZPcWckiv5sz7HIywA3nA9zgZ25HckVnL+7muZAbiRpiGBOW4HwP2on/6fjS7M5BjhjVd8xYL6sBsDuTyOg4qJONjZFRkbGPIhySxstN0iC1itpLeVZC82+TzCx4BZv8AUFB6DkDgZpo47B1WAW7q1wqvzKcopHDcdWOc+2CPmp9MkbUdIut6OrK6EsTlpEI6NjvkN+MGhr38kF+XmQQsIhHExTdu9z7YznjrjFYW0x+5kyCnMr3FjI+jXz3ibYVh3fxBjnsPvkis3ZgR24VThu5rWtbteRTLthaTyjtVOBKDxkjpgEg0HHh676OATnnit2BGyLuFFJG5nbp9suYjkc5NebBwLlQThsHBrUJ4XZv1qfxVmHwlGrh8MrDv7VqOLVCWK6gzQ4vNvGml9SwANz0Lfy/3/FTPdSu1y+4iXqHH6tozkUe03RotP8zMhJfBJP8Az5oJd2rLqzQhjlpNvH+WseTAwNmRKkGTWWnQ3VskzTWWW5/jMyt+cUqMp4esAMSXDA0qqOmao/CbOfSHsS8i+ZINm0QqNqgd88c5z1rJStq092ySRfTLBEfKCR4Rf07cbskv+rPPau1yRqwxQ+40tJAfTn59q0ZOlx5I5VT6nC4LaXVr54Lx5pHwdzFuQB0xx79q0GlaOtlE8ETPIC3JkNdAPhuBXLpAoZv1ELgn71LFoyx/9PFdh6ft+YFWhMJP4YgvlAljzg59JxVB/wD6fWaEtGrg5yRnI5rqiWKoP017Nov+WtHER+RnIJ/AKkqBO6xjouOP+cCp08IJGipuLAdMjFdWNop/lqM2S/5aTtrdwfnOZp4Tj/8A1VKvhOHvFXR/oh2GKX0Xxmn4iG5zv/0pCOkVD9Y8K3EsCiyUAjO5T/N7V1QWX/bT/Q/GKVsYYUYDuck0rwbeRzpLdQBivIjyAPya86/JI18YydwjGFAP6f8AmM1136LBB9qztx4CiuL6SeW4cqzZ8tVx+5zWPqOmLAIkRlNTF6ZcSW+izSxR4gtVJkh3AG4JYZYZH8q56+2O5q15S65boLSMxEZkRZ127x0+QCDnj7c1uB4Sh8kxlv4YGBGF9PPxXpfDMUEapB6EUcLjAFcOiUgcoQi1+c55Fpt/p9zGRZyGQOoQj1AAsN+SDjaVB6/FbTyISSFjyPer3+DbD1zUyWOytGDAMQIHuECoNFkh6R4zTnS0bqtGUgqdYKvUMzx0GFx6l4qH/wBKWBuRcmD+Ko61rBBUgt6BUGdM7Ho1uq4K4pVpPp6VHU6XjSxSpV0MWKWKVKunRiKW0d6alXToxjU03ljtSpV0EXljvTiJaalXTo/ljtSMdNSrp0WyvQWlSrp0fbTFRjmlSroZEbdTXn6ZaVKugnoW6ipBEopqVdDPewDpSC0qVdOj4pUqVdOn/9k=',
+        description: 'Versatile herb, prefers dry conditions and lots of light.',
+        category: 'Herb',
+    },
+    {
+        id: 10, name: 'Lavender',
+        care: 'Full sunlight, water when soil is dry',
+        nextWatering: Date.now() + 270000,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSDwmyIDTmC-PKC7qqMpjWh50CBdE9gQY7fIqyR7tdQQNT6xMBR6fHIfn6Csnj_GCHGdOow&amp;s',
+        description: 'Fragrant herb, needs well-drained soil and plenty of sun.',
+        category: 'Herb',
+    },
+];
+&nbsp;
+const initialFertilizers = [
+    {
+        id: 1,
+        name: 'Organic Compost',
+        care: 'Once a month',
+        nextFertilizing: Date.now() + 180000,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlv-GW-mRv26cuZTaDkImR9JO2uX6ibQEjRg9Sz_trgyfD8bM19RpGb8E&amp;s',
+        description: 'Rich in nutrients, improves soil structure and fertility.',
+        category: 'Organic',
+&nbsp;
+    },
+    {
+        id: 2,
+        name: 'Liquid Fertilizer',
+        care: 'Twice a month',
+        nextFertilizing: Date.now() + 240000,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7LBC0h7EyKMRtfPFvvdDFNS8zdoSuLekQ_77wjBbDFMe1SD15GQcWBTQ&amp;s',
+        description: 'Quickly absorbed, ideal for fast-growing plants.',
+        category: 'Chemical',
+    },
+    {
+        id: 3,
+        name: 'Bone Meal',
+        care: 'Once every two months',
+        nextFertilizing: Date.now() + 300000,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSphwl6aXrWIEct05Ktb1Rlq9xNmoMu0eggaR82lRyZal6z8WtlJlLzxxE1S_VCVx_C2pos&amp;s',
+        description: 'High in phosphorus, promotes strong root development.',
+        category: 'Organic',
+    },
+    {
+        id: 4,
+        name: 'All-Purpose Fertilizer',
+        care: 'Once a month',
+        nextFertilizing: Date.now() + 360000,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVLivLAA0TxTgYtjaNqp-mPI9VSiuoMZFj2_ou_jSs-EowGSkDw7U05Ws&amp;s',
+        description: 'Balanced nutrients for a variety of plants.',
+        category: 'Chemical',
+    },
+];
+export const NurseryProvider = <span class="fstat-no" title="function not covered" >({</span> children }) =&gt; {
+    // State to hold plants and fertilizers, initialized from localStorage if available
+    const [plants, setPlants] = <span class="cstat-no" title="statement not covered" >useState(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+        const saved = <span class="cstat-no" title="statement not covered" >localStorage.getItem('plants');</span>
+<span class="cstat-no" title="statement not covered" >        return saved ? JSON.parse(saved) : initialPlants;</span>
+    });
+    // State to hold fertilizers, initialized from localStorage if available
+    const [fertilizers, setFertilizers] = <span class="cstat-no" title="statement not covered" >useState(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+        const saved = <span class="cstat-no" title="statement not covered" >localStorage.getItem('fertilizers');</span>
+<span class="cstat-no" title="statement not covered" >        return saved ? JSON.parse(saved) : initialFertilizers;</span>
+    });
+&nbsp;
+    const [notifications, setNotifications] = <span class="cstat-no" title="statement not covered" >useState([]);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+        // Persist plants and fertilizers to localStorage whenever they change
+<span class="cstat-no" title="statement not covered" >        localStorage.setItem('plants', JSON.stringify(plants));</span>
+<span class="cstat-no" title="statement not covered" >        localStorage.setItem('fertilizers', JSON.stringify(fertilizers));</span>
+    }, [plants, fertilizers]);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+        // Check every 5 seconds for plants or fertilizers that need attention
+        // and update notifications accordingly
+        const interval = <span class="cstat-no" title="statement not covered" >setInterval(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+            const now = <span class="cstat-no" title="statement not covered" >Date.now();</span>
+            // Check plants for watering needs
+<span class="cstat-no" title="statement not covered" >            plants.forEach(<span class="fstat-no" title="function not covered" >pl</span>ant =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                if (now &gt;= plant.nextWatering) {</span>
+                    // Add notification if not already present
+<span class="cstat-no" title="statement not covered" >                    setNotifications(<span class="fstat-no" title="function not covered" >pr</span>ev =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                        if (!prev.includes(`Time to water ${plant.name}`)) {</span>
+<span class="cstat-no" title="statement not covered" >                            return [...prev, `Time to water ${plant.name}`];</span>
+                        }
+<span class="cstat-no" title="statement not covered" >                        return prev;</span>
+                    });
+                }
+            });
+            // Check fertilizers for fertilizing needs
+<span class="cstat-no" title="statement not covered" >            fertilizers.forEach(<span class="fstat-no" title="function not covered" >fe</span>rt =&gt; {</span>
+                // Add notification if not already present
+<span class="cstat-no" title="statement not covered" >                if (now &gt;= fert.nextFertilizing) {</span>
+<span class="cstat-no" title="statement not covered" >                    setNotifications(<span class="fstat-no" title="function not covered" >pr</span>ev =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                        if (!prev.includes(`Time to fertilize with ${fert.name}`)) {</span>
+<span class="cstat-no" title="statement not covered" >                            return [...prev, `Time to fertilize with ${fert.name}`];</span>
+                        }
+<span class="cstat-no" title="statement not covered" >                        return prev;</span>
+                    });
+                }
+            });
+        }, 5000);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >clearInterval(interval);</span></span>
+    }, [plants, fertilizers]);
+&nbsp;
+    const markWatered = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(i</span>d) =&gt; {</span>
+        // Update the nextWatering time for the specified plant and clear notifications
+<span class="cstat-no" title="statement not covered" >        setPlants(plants.map(<span class="fstat-no" title="function not covered" >p </span>=&gt; <span class="cstat-no" title="statement not covered" >p.id === id</span></span>
+            ? { ...p, nextWatering: Date.now() + 24 * 60 * 60 * 1000 }
+            : p));
+<span class="cstat-no" title="statement not covered" >        setNotifications([]);</span>
+    };
+&nbsp;
+    const markFertilized = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(i</span>d) =&gt; {</span>
+        // Update the nextFertilizing time for the specified fertilizer and clear notifications
+<span class="cstat-no" title="statement not covered" >        setFertilizers(fertilizers.map(<span class="fstat-no" title="function not covered" >f </span>=&gt; <span class="cstat-no" title="statement not covered" >f.id === id</span></span>
+            ? { ...f, nextFertilizing: Date.now() + 30 * 24 * 60 * 60 * 1000 }
+            : f));
+<span class="cstat-no" title="statement not covered" >        setNotifications([]);</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return (</span>
+        // Provide plants, fertilizers, notifications, and action functions to children components
+        &lt;NurseryContext.Provider value={{ plants, fertilizers, notifications, markWatered, markFertilized }}&gt;
+            {children}
+        &lt;/NurseryContext.Provider&gt;
+    );
+};
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2025-09-17T14:12:23.854Z
+            </div>
+        <script src="../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
+    </body>
+</html>
+    

@@ -1,0 +1,63 @@
+body {
+  background-color: #f8f9fa;
+}
+
+/* Category Display on images */
+.image-wrapper {
+  position: relative;
+}
+
+.category-chip {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 123, 255, 0.85);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  transform: rotate(60deg);
+  transition: transform 0.3s ease;
+}
+
+.category-chip:hover {
+  transform: rotate(60deg) scale(1.1);
+}
+
+/* Category Display on images */
+
+/* Default: show full text, hide count */
+.notif-text {
+  display: inline;
+}
+
+.notif-count {
+  display: none;
+}
+
+/* On small screens */
+@media (max-width: 576px) {
+  .notif-text {
+    display: none;
+  }
+
+  .notif-count {
+    display: inline;
+    font-weight: bold;
+  }
+
+  /* Show full text on hover/tap */
+  .notification-badge:hover .notif-text {
+    display: inline;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    z-index: 2000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+}
